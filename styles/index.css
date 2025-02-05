@@ -18,8 +18,8 @@ body {
 
 @font-face {
     font-family: 'ZT Formom';
-    src: url('../assets/fonts/ZT Formom.woff2') format('woff2'),
-         url('../assets/fonts/ZT Formom.ttf') format('truetype');
+    src: url('jkwonn.github.io/assets/fonts/ZT Formom.woff2') format('woff2'),
+         url('jkwonn.github.io/assets/fonts/ZT Formom.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
