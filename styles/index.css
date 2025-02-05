@@ -1,18 +1,26 @@
 h1 {
     font-size: 50px;
-    font-family: "Libre Caslon Text", serif;
+    font-family: "ZT Formom", serif;
     font-weight: 200;
     font-style: normal;
     text-align: center;
 }
 
 p {
-    font-family: "Libre Caslon Text", serif;
+    font-family: "ZT Formom", serif;
     font-size: 20px;
     text-align:center;
 }
 
 body {
     background-color: #FFFFE4;
+}
+
+@font-face {
+    font-family: 'ZT Formom';
+    src: url('../assets/fonts/ZT Formom.woff2') format('woff2'),
+         url('../assets/fonts/ZT Formom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
