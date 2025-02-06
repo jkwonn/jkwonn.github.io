@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400&display=swap');
+
+@font-face {
+    font-family: 'ZT Formom';
+    src: url('jkwonn.github.io/assets/fonts/ZT Formom.woff2') format('woff2'),
+         url('jkwonn.github.io/assets/fonts/ZT Formom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AppleGaramond';
+    src: url('/assets/fonts/AppleGaramond.ttf') format('woff2'),
+         url('/assets/fonts/AppleGaramond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Garamond', serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 10px; 
+}
+
+h1 {
+    font-size: clamp(28px, 3vw, 48px);
+    font-weight: normal;
+    font-family: "AppleGaramond", sans-serif;
+    white-space: nowrap;
+    width: fit-content; 
+    margin-bottom: 10px; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 85vw;
+    padding: 20px;
+    gap: 40px; 
+}
+
+nav {
+    text-align: left;
+    min-width: 200px;
+    max-width: 20vw;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: clamp(14px, 1.5vw, 20px);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3366cc;
+}
+
+main {
+    flex: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    max-width: 50vw;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.news {
+    flex: 1;
+    width: 20vw;
+    text-align: left;
+    font-size: clamp(14px, 1.3vw, 18px);
+    min-width: 250px;
+    padding-left: 40px; 
+}
+
+.news h2 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "AppleGaramond", sans-serif;
+}
+
+.news ul {
+    list-style: none;
+    padding: 0;
+}
+
+.news ul li {
+    margin-bottom: 10px;
+    font-size: clamp(14px, 1.5vw, 20px);
+}
+
+.news ul li a {
+    text-decoration: none;
+    color: #3366cc;
+    font-weight: bold;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .news {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    main img {
+        max-width: 80vw;
+    }
+}
+
+
+@media (max-width: 900px) {
+    nav {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main img {
+        max-width: 60vw;
+    }
+
+    .news {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news {
+        width: 90%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    main img {
+        max-width: 75vw;
+    }
+}
