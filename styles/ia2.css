@@ -35,7 +35,9 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    padding-top: 10px; /* Push it down slightly */
 }
+
 
 header {
     text-align: left;
@@ -43,12 +45,14 @@ header {
 }
 
 h1 {
-    font-size: clamp(28px, 3vw, 48px);
+    font-size: clamp(24px, 5vw, 48px); /* Adjust for smaller screens */
     font-weight: normal;
     font-family: "AppleGaramond", sans-serif;
-    white-space: nowrap;
-    width: fit-content; 
-    margin-bottom: 10px; 
+    white-space: nowrap; /* Prevents wrapping */
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 20px; /* Ensures it doesn't get pushed too high */
 }
 
 .container {
@@ -188,6 +192,37 @@ main img {
     .news {
         text-align: center;
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 7vw; /* Ensures readability */
+        text-align: center;
+        width: auto;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .news {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
     }
 }
 
