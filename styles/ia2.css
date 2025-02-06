@@ -112,7 +112,7 @@ main img {
 
 .news h2 {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     font-family: "AppleGaramond", sans-serif;
 }
 
@@ -129,7 +129,7 @@ main img {
 .news ul li a {
     text-decoration: none;
     color: #3366cc;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 @media (min-width: 1600px) {
