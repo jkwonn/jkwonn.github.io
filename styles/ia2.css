@@ -27,6 +27,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow-x: hidden; /* Prevents side-scrolling issues */
+    overflow-y: auto; /* Ensures content is scrollable */
 }
 
 .sidebar {
@@ -35,8 +37,11 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 10px; /* Push it down slightly */
+    padding-top: 20px;
+    position: relative;
+    z-index: 5; /* Ensures it doesn’t get hidden */
 }
+
 
 
 header {
@@ -45,15 +50,19 @@ header {
 }
 
 h1 {
-    font-size: clamp(24px, 5vw, 48px); /* Adjust for smaller screens */
+    font-size: clamp(24px, 6vw, 48px); /* Scales properly on mobile */
     font-weight: normal;
     font-family: "AppleGaramond", sans-serif;
     white-space: nowrap; /* Prevents wrapping */
     text-align: center;
     width: 100%;
     display: block;
-    margin-top: 20px; /* Ensures it doesn't get pushed too high */
+    margin-top: 20px;
+    position: relative;
+    z-index: 10; /* Ensures it's above other elements */
+    visibility: visible !important; /* Forces visibility */
 }
+
 
 .container {
     display: flex;
@@ -206,17 +215,22 @@ main img {
         width: 100%;
         align-items: center;
         padding-top: 20px;
+        display: flex;
     }
 
     h1 {
-        font-size: 7vw; /* Ensures readability */
+        font-size: 7vw; /* Makes it readable */
         text-align: center;
         width: auto;
+        position: relative;
+        visibility: visible !important; /* Forces visibility */
     }
 
     nav {
         width: 100%;
         text-align: center;
+        position: relative;
+        z-index: 5;
     }
 
     .news {
@@ -225,6 +239,7 @@ main img {
         margin-top: 20px;
     }
 }
+
 
 @media (max-width: 700px) {
     .container {
