@@ -218,7 +218,7 @@ main img {
     .sidebar {
         width: 100%;
         align-items: center;
-        padding-top: 80px !important; /* Adds more space above title */
+        padding-top: 100px; /* Adds more space above title */
         display: flex;
     }
 
