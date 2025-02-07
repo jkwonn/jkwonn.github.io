@@ -1,0 +1,165 @@
+/* 1. Universal Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400&display=swap');
+
+@font-face {
+  font-family: 'ZT Formom';
+  src: url('jkwonn.github.io/assets/fonts/ZT Formom.woff2') format('woff2'),
+       url('jkwonn.github.io/assets/fonts/ZT Formom.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AppleGaramond';
+  src: url('/assets/fonts/AppleGaramond.ttf') format('woff2'),
+       url('/assets/fonts/AppleGaramond.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Garamond', serif;
+  background-color: white;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  min-height: 100vh;      
+  padding: 20px;
+}
+
+/* 4. Centered Page Container */
+.page-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+header h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  font-family: "AppleGaramond", sans-serif;
+  margin: 0;
+  padding: 10px 0;
+  white-space: normal;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;     
+  white-space: nowrap;    
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: clamp(14px, 1.5vw, 20px);
+  transition: color 0.3s ease;
+  white-space: nowrap; 
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #3366cc;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 0;
+}
+
+main {
+  flex: 2;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  font-family: "AppleGaramond", sans-serif;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* 8. News Section */
+.news {
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+}
+
+.news h2 {
+  font-size: 18px;
+  font-family: "AppleGaramond", sans-serif;
+  margin-bottom: 10px;
+}
+
+.news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news ul li {
+  margin-bottom: 10px;
+  font-size: clamp(14px, 1.5vw, 20px);
+}
+
+.news ul li a {
+  text-decoration: none;
+  color: #3366cc;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .news {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: clamp(22px, 5.5vw, 36px);
+  }
+  nav ul {
+    gap: 10px;
+  }
+}
+
