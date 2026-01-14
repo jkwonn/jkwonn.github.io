@@ -1,15 +1,14 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Home, About, Gear, Projects, StillImages, MovingImages } from './pages'
+import { Home, About, Gear, Projects, MovingImages, Thoughts, BlogPost, Contact } from './pages'
 
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
   { path: '/gear', label: 'Gear' },
   { path: '/projects', label: 'Projects' },
-  { path: '/still-images', label: 'Still Images' },
-  { path: '/moving-images', label: 'Moving Images' },
-  { path: '#', label: 'Thoughts' },
-  { path: '#', label: 'Contact' },
+  { path: '/videos', label: 'Videos' },
+  { path: '/thoughts', label: 'Thoughts' },
+  { path: '/contact', label: 'Contact' },
 ]
 
 const newsItems = [
@@ -28,11 +27,16 @@ function getPageTitle(pathname: string): string {
       return 'Gear'
     case '/projects':
       return 'Projects'
-    case '/still-images':
-      return 'Still\nImages'
-    case '/moving-images':
-      return 'Moving\nImages'
+    case '/videos':
+      return 'Videos'
+    case '/thoughts':
+      return 'Thoughts'
+    case '/contact':
+      return 'Contact'
     default:
+      if (pathname.startsWith('/thoughts/')) {
+        return 'Thoughts'
+      }
       return 'J. Kwon'
   }
 }
@@ -40,7 +44,14 @@ function getPageTitle(pathname: string): string {
 function App() {
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const isGear = location.pathname === '/gear'
   const pageTitle = getPageTitle(location.pathname)
+
+  const getMainClassName = () => {
+    if (isHome) return ''
+    if (isGear) return 'page-content full-height'
+    return 'page-content'
+  }
 
   return (
     <div className="home-wrapper">
@@ -71,14 +82,16 @@ function App() {
           </nav>
         </div>
 
-        <main className={isHome ? '' : 'page-content'}>
+        <main className={getMainClassName()}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/gear" element={<Gear />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/still-images" element={<StillImages />} />
-            <Route path="/moving-images" element={<MovingImages />} />
+            <Route path="/videos" element={<MovingImages />} />
+            <Route path="/thoughts" element={<Thoughts />} />
+            <Route path="/thoughts/:slug" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
 

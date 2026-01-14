@@ -6,9 +6,9 @@ export default function About() {
         with the intention of building software to control interesting hardware
       </p>
       <p>
-        my current pursuits are my internship at manifold labs, my youtube
-        channel, and research work under the history department.
+        my current pursuits are my youtube channel, and research work under the
+        history department.
       </p>
     </article>
-  )
+  );
 }
