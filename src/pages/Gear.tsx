@@ -25,18 +25,17 @@ export default function Gear() {
         {expanded.tech && (
           <ul>
             <li>main computer — m1 macbook pro 16GB 512GB</li>
-            <li>secondary computers — thinkpad t14s gen 4 / x230</li>
+            <li>secondary computers — x62, thinkpad t14s gen 4</li>
             <li>
               monitor — dell S2722DC (cheap second hand but nice monitor!)
             </li>
-            <li>headphones - airpods pro, koss porta pro, kz zsn pro x</li>
-            <li>keyboard — hhkb hybrid type s / lk65 pc / space65 r1</li>
-            <li>mouse — superlight / protoarc em01</li>
+            <li>headphones - airpods pro, beats studio buds+, kz zsn pro x</li>
+            <li>keyboard — hhkb hybrid type s</li>
+            <li>mouse — hpc 02</li>
             <li>
-              eink — hisense touch blue / boox note air 3 / supernote a5x2 +
-              lamy collab pen
+              eink — hisense touch blue / supernote a5x2/a6x2 + lamy collab pen
             </li>
-            <li>phone — iphone 15 pro</li>
+            <li>phone — iphone 15 pro / 202 kc</li>
           </ul>
         )}
       </section>
