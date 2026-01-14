@@ -1,0 +1,6 @@
+export { default as Home } from './Home'
+export { default as About } from './About'
+export { default as Gear } from './Gear'
+export { default as Projects } from './Projects'
+export { default as StillImages } from './StillImages'
+export { default as MovingImages } from './MovingImages'
