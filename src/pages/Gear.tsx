@@ -1,42 +1,52 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function Gear() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({
     tech: false,
     camera: false,
     stationary: false,
-  })
+  });
 
   const toggle = (section: string) => {
-    setExpanded((prev) => ({ ...prev, [section]: !prev[section] }))
-  }
+    setExpanded((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
 
   return (
     <article className="about-content">
       <section>
-        <h3 className="gear-category collapsible" onClick={() => toggle('tech')}>
-          <span className="collapse-icon">{expanded.tech ? '−' : '+'}</span> tech
+        <h3
+          className="gear-category collapsible"
+          onClick={() => toggle("tech")}
+        >
+          <span className="collapse-icon">{expanded.tech ? "−" : "+"}</span>{" "}
+          tech
         </h3>
         <p className="gear-date">[1/14/26]</p>
         {expanded.tech && (
           <ul>
             <li>main computer — m1 macbook pro 16GB 512GB</li>
             <li>secondary computers — thinkpad t14s gen 4 / x230</li>
-            <li>monitor — dell S2722DC (cheap second hand but nice monitor!)</li>
+            <li>
+              monitor — dell S2722DC (cheap second hand but nice monitor!)
+            </li>
             <li>headphones - airpods pro, koss porta pro, kz zsn pro x</li>
             <li>keyboard — hhkb hybrid type s / lk65 pc / space65 r1</li>
             <li>mouse — superlight / protoarc em01</li>
             <li>
-              eink — hisense touch blue / boox note air 3 / supernote a5x2 + lamy
-              collab pen
+              eink — hisense touch blue / boox note air 3 / supernote a5x2 +
+              lamy collab pen
             </li>
             <li>phone — iphone 15 pro</li>
           </ul>
         )}
       </section>
       <section>
-        <h3 className="gear-category collapsible" onClick={() => toggle('camera')}>
-          <span className="collapse-icon">{expanded.camera ? '−' : '+'}</span> camera
+        <h3
+          className="gear-category collapsible"
+          onClick={() => toggle("camera")}
+        >
+          <span className="collapse-icon">{expanded.camera ? "−" : "+"}</span>{" "}
+          camera
         </h3>
         <p className="gear-date">[1/14/26]</p>
         {expanded.camera && (
@@ -50,13 +60,21 @@ export default function Gear() {
         )}
       </section>
       <section>
-        <h3 className="gear-category collapsible" onClick={() => toggle('stationary')}>
-          <span className="collapse-icon">{expanded.stationary ? '−' : '+'}</span> stationary
+        <h3
+          className="gear-category collapsible"
+          onClick={() => toggle("stationary")}
+        >
+          <span className="collapse-icon">
+            {expanded.stationary ? "−" : "+"}
+          </span>{" "}
+          stationery
         </h3>
         <p className="gear-date">[1/14/26]</p>
         {expanded.stationary && (
           <ul>
-            <li>main pencil rotation — rotring 600 loft 0.5mm / kurutoga dive</li>
+            <li>
+              main pencil rotation — rotring 600 loft 0.5mm / kurutoga dive
+            </li>
             <li>main pen rotation — kaweco special f / ohto GS01</li>
             <li>
               pencil collection — rotring 800 0.5mm / ohto MS01 0.5mm / rotring
@@ -66,5 +84,5 @@ export default function Gear() {
         )}
       </section>
     </article>
-  )
+  );
 }
