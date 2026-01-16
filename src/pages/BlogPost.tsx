@@ -21,7 +21,9 @@ export default function BlogPost() {
     <article className="about-content">
       <h3 className="gear-category">{post.title}</h3>
       <p className="blog-date">{post.date}</p>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
+      <div className="blog-content">
+        <ReactMarkdown>{post.content}</ReactMarkdown>
+      </div>
       <p>
         <Link to="/thoughts">&lt; back</Link>
       </p>

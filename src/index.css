@@ -464,6 +464,26 @@ a:hover {
   margin-bottom: 12px;
 }
 
+.blog-content {
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.6;
+}
+
+.blog-content p {
+  margin-bottom: 12px;
+  font-size: inherit;
+}
+
+.blog-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.blog-content ul li {
+  margin-bottom: 8px;
+}
+
 .page-container .news {
   flex: 1;
   max-width: 300px;
