@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export default function Gear() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({
-    tech: false,
-    camera: false,
-    stationary: false,
+    tech: true,
+    camera: true,
+    stationary: true,
   });
 
   const toggle = (section: string) => {
@@ -21,7 +21,6 @@ export default function Gear() {
           <span className="collapse-icon">{expanded.tech ? "−" : "+"}</span>{" "}
           tech
         </h3>
-        <p className="gear-date">[1/14/26]</p>
         {expanded.tech && (
           <ul>
             <li>main computer — m1 macbook pro 16GB 512GB</li>
@@ -38,6 +37,7 @@ export default function Gear() {
             <li>phone — iphone 15 pro / 202 kc</li>
           </ul>
         )}
+        <p className="gear-date">[1/14/26]</p>
       </section>
       <section>
         <h3
@@ -47,7 +47,6 @@ export default function Gear() {
           <span className="collapse-icon">{expanded.camera ? "−" : "+"}</span>{" "}
           camera
         </h3>
-        <p className="gear-date">[1/14/26]</p>
         {expanded.camera && (
           <ul>
             <li>main cam — fujifilm xh2s</li>
@@ -57,6 +56,7 @@ export default function Gear() {
             <li>fisheye lens — tt artisan 7.5mm/2</li>
           </ul>
         )}
+        <p className="gear-date">[1/14/26]</p>
       </section>
       <section>
         <h3
@@ -68,7 +68,6 @@ export default function Gear() {
           </span>{" "}
           stationery
         </h3>
-        <p className="gear-date">[1/14/26]</p>
         {expanded.stationary && (
           <ul>
             <li>
@@ -81,6 +80,7 @@ export default function Gear() {
             </li>
           </ul>
         )}
+        <p className="gear-date">[1/14/26]</p>
       </section>
     </article>
   );
