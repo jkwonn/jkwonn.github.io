@@ -78,13 +78,9 @@ a:hover {
   text-align: left;
   min-width: 200px;
   align-self: center;
-  position: relative;
 }
 
 .home-container .sidebar header {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
   margin-bottom: 10px;
   min-width: 200px;
 }
@@ -487,6 +483,21 @@ a:hover {
 }
 
 .gear-category a:hover {
+  color: #3366cc;
+}
+
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.back-arrow svg {
+  display: block;
+}
+
+.back-arrow:hover {
   color: #3366cc;
 }
 

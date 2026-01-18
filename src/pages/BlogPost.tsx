@@ -9,24 +9,32 @@ export default function BlogPost() {
   if (!post) {
     return (
       <article className="about-content">
-        <p>Post not found.</p>
-        <p>
-          <Link to="/thoughts">&lt; Thoughts</Link>
-        </p>
+        <h3 className="gear-category">
+          <Link to="/thoughts" className="back-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </Link>
+          Post not found
+        </h3>
       </article>
     );
   }
 
   return (
     <article className="about-content">
-      <h3 className="gear-category">{post.title}</h3>
+      <h3 className="gear-category">
+        <Link to="/thoughts" className="back-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </Link>
+        {post.title}
+      </h3>
       <p className="blog-date">{post.date}</p>
       <div className="blog-content">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
-      <p>
-        <Link to="/thoughts">&lt; back</Link>
-      </p>
     </article>
   );
 }
